@@ -1,0 +1,9 @@
+# Ignore
+create.exe
+createQ.exe
+createQue.exe
+queStackRecur.exe
+queueWithLL.exe
+queueWithStack.exe
+stackUsingQueue.exe
+stackUsingQueue2.exe
