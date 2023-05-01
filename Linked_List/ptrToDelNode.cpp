@@ -77,7 +77,15 @@ Node* search(Node *head, int key)
        delete(temp);
     }
 
+//another approach to delete a node when only pointer to delete node is given
+//swap the delete node with the next node and delete the next node;
 
+void deleteNode2(Node*del){//assume we want to delete 4
+    Node*temp=del->next;// 1->4->3
+    swap(del->data,temp->data);//1->3->4
+    del->next=del->next->next;
+    delete(temp);
+}
 
 int main(){
 
@@ -89,7 +97,7 @@ int main(){
     insertAtTail(head,56);
     display(head);
     Node* todel=search(head,26);
-    deleteNode(todel);
+    deleteNode2(todel);
     display(head);
     return 0;
 }
