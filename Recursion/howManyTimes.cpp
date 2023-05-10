@@ -20,9 +20,20 @@ int func(int n){
                            func(1) ->0
                            10/2 = 5, 5/2 = 2, and 2/2 = 1. thus it calls the function 3 times
 */
+void fun1(int n) 
+{ 
+   int i = 0;   
+   if (n > 1) 
+     fun1(n - 1); 
+   for (i = 0; i < n; i++) 
+     cout << " * "; 
+    cout<<endl;
+} 
 
 int main(){
-    int n=10;
-    func(n);
+    int n=1024;
+    int a=func(n);
+    cout<<a<<endl;
+    fun1(5);
     return 0;
 }
